@@ -3,19 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D7D097524DE761B00B1F552 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D097424DE761B00B1F552 /* ViewModel.swift */; };
 		8D952D0D24DE74F500A07380 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D952D0C24DE74F500A07380 /* AppDelegate.swift */; };
 		8D952D0F24DE74F500A07380 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D952D0E24DE74F500A07380 /* SceneDelegate.swift */; };
 		8D952D1124DE74F500A07380 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D952D1024DE74F500A07380 /* ViewController.swift */; };
 		8D952D1424DE74F500A07380 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D952D1224DE74F500A07380 /* Main.storyboard */; };
 		8D952D1624DE74F800A07380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D952D1524DE74F800A07380 /* Assets.xcassets */; };
 		8D952D1924DE74F800A07380 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D952D1724DE74F800A07380 /* LaunchScreen.storyboard */; };
+		AE90F03742C5C55693CA980C /* Pods_CustomGeometry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6185D599CCE1F6BF05F29C /* Pods_CustomGeometry.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C6185D599CCE1F6BF05F29C /* Pods_CustomGeometry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomGeometry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		584A6574992BE18B6752012C /* Pods-CustomGeometry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomGeometry.release.xcconfig"; path = "Target Support Files/Pods-CustomGeometry/Pods-CustomGeometry.release.xcconfig"; sourceTree = "<group>"; };
+		8D7D097424DE761B00B1F552 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		8D952D0924DE74F500A07380 /* CustomGeometry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomGeometry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D952D0C24DE74F500A07380 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D952D0E24DE74F500A07380 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		8D952D1524DE74F800A07380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D952D1824DE74F800A07380 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D952D1A24DE74F800A07380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC65286BDA48CBCA8FDC0A42 /* Pods-CustomGeometry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomGeometry.debug.xcconfig"; path = "Target Support Files/Pods-CustomGeometry/Pods-CustomGeometry.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,52 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE90F03742C5C55693CA980C /* Pods_CustomGeometry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2547995C26CF49C8E1C141FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC65286BDA48CBCA8FDC0A42 /* Pods-CustomGeometry.debug.xcconfig */,
+				584A6574992BE18B6752012C /* Pods-CustomGeometry.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8D7D097124DE75D700B1F552 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8D952D1024DE74F500A07380 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8D7D097224DE75DC00B1F552 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8D7D097424DE761B00B1F552 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8D7D097324DE75E100B1F552 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8D952D0024DE74F500A07380 = {
 			isa = PBXGroup;
 			children = (
 				8D952D0B24DE74F500A07380 /* CustomGeometry */,
 				8D952D0A24DE74F500A07380 /* Products */,
+				2547995C26CF49C8E1C141FD /* Pods */,
+				A47923062C360B8D0201CBF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +99,23 @@
 			children = (
 				8D952D0C24DE74F500A07380 /* AppDelegate.swift */,
 				8D952D0E24DE74F500A07380 /* SceneDelegate.swift */,
-				8D952D1024DE74F500A07380 /* ViewController.swift */,
+				8D7D097324DE75E100B1F552 /* Model */,
+				8D7D097224DE75DC00B1F552 /* ViewModel */,
+				8D7D097124DE75D700B1F552 /* ViewController */,
 				8D952D1224DE74F500A07380 /* Main.storyboard */,
 				8D952D1524DE74F800A07380 /* Assets.xcassets */,
 				8D952D1724DE74F800A07380 /* LaunchScreen.storyboard */,
 				8D952D1A24DE74F800A07380 /* Info.plist */,
 			);
 			path = CustomGeometry;
+			sourceTree = "<group>";
+		};
+		A47923062C360B8D0201CBF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C6185D599CCE1F6BF05F29C /* Pods_CustomGeometry.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D952D1D24DE74F800A07380 /* Build configuration list for PBXNativeTarget "CustomGeometry" */;
 			buildPhases = (
+				2202ECBCE881B5A525C8398C /* [CP] Check Pods Manifest.lock */,
 				8D952D0524DE74F500A07380 /* Sources */,
 				8D952D0624DE74F500A07380 /* Frameworks */,
 				8D952D0724DE74F500A07380 /* Resources */,
+				61A4FF2DBB80900BBC0A66BB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +186,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2202ECBCE881B5A525C8398C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomGeometry-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61A4FF2DBB80900BBC0A66BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CustomGeometry/Pods-CustomGeometry-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CustomGeometry/Pods-CustomGeometry-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CustomGeometry/Pods-CustomGeometry-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8D952D0524DE74F500A07380 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +235,7 @@
 			files = (
 				8D952D1124DE74F500A07380 /* ViewController.swift in Sources */,
 				8D952D0D24DE74F500A07380 /* AppDelegate.swift in Sources */,
+				8D7D097524DE761B00B1F552 /* ViewModel.swift in Sources */,
 				8D952D0F24DE74F500A07380 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +378,7 @@
 		};
 		8D952D1E24DE74F800A07380 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC65286BDA48CBCA8FDC0A42 /* Pods-CustomGeometry.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +397,7 @@
 		};
 		8D952D1F24DE74F800A07380 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 584A6574992BE18B6752012C /* Pods-CustomGeometry.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
