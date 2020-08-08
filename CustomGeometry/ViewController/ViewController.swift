@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         mySceneView.scene = scene
         
         addCameraNode(scene: scene)
+        
+        createNode(scene: scene)
     }
     
     func setupSceneView() {
@@ -56,7 +58,7 @@ class ViewController: UIViewController {
         scene.rootNode.addChildNode(cameraNode)
     }
     
-    func createNode(scene: SCNNode) {
+    func createNode(scene: SCNScene) {
         let harf = Float(2)
         
         let vertices = [
@@ -72,8 +74,19 @@ class ViewController: UIViewController {
         ]
         
         let verticesSource = SCNGeometrySource(vertices: vertices)
+        let customGeometry = SCNGeometry(sources: [verticesSource], elements: [])
+        let node = SCNNode(geometry: customGeometry)
+        scene.rootNode.addChildNode(node)
         
+        for vertex in vertices {
+            let sphereGeometry = SCNSphere(radius: 0.3)
+            let node = SCNNode(geometry: sphereGeometry)
+            node.position = vertex
+            scene.rootNode.addChildNode(node)
+        }
     }
+    
+    
     
     
 
