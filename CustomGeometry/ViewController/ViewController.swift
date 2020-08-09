@@ -62,19 +62,20 @@ class ViewController: UIViewController {
         let harf = Float(2)
         
         let vertices = [
-            SCNVector3(-harf, harf, -harf), // 手前の4点
-            SCNVector3(-harf, -harf, -harf),
-            SCNVector3(harf, harf, -harf),
-            SCNVector3(harf, -harf, -harf),
+            SCNVector3(-harf, harf, harf), // 手前の4点 0
+            SCNVector3(-harf, -harf, harf), // 1
+            SCNVector3(harf, harf, harf), // 2
+            SCNVector3(harf, -harf, harf), // 3
             
-            SCNVector3(-harf, harf, harf), // 奥の4点
-            SCNVector3(-harf, -harf, harf),
-            SCNVector3(harf, harf, harf),
-            SCNVector3(harf, -harf, harf)
+            SCNVector3(-harf, harf, -harf), // 奥の4点 4
+            SCNVector3(-harf, -harf, -harf), // 5
+            SCNVector3(harf, harf, -harf), // 6
+            SCNVector3(harf, -harf, -harf) // 7
         ]
         
         let verticesSource = SCNGeometrySource(vertices: vertices)
-        let customGeometry = SCNGeometry(sources: [verticesSource], elements: [])
+        let faceSource = polygonCreate()
+        let customGeometry = SCNGeometry(sources: [verticesSource], elements: [faceSource])
         let node = SCNNode(geometry: customGeometry)
         scene.rootNode.addChildNode(node)
         
@@ -85,6 +86,33 @@ class ViewController: UIViewController {
             scene.rootNode.addChildNode(node)
         }
     }
+    
+    func polygonCreate() -> SCNGeometryElement {
+        // 半時計周りに指定するところが前
+        let indices: [Int32] = [
+            0, 1, 2, // 2行で1面 前
+            2, 1, 3,
+            
+            2, 3, 6, // 右
+            6, 3, 7,
+            
+            4, 1, 0, // 左
+            4, 5, 1,
+            
+            6, 5, 4, // 奥
+            7, 5, 6,
+            
+            0, 2, 4, // 上
+            4, 2, 6,
+            
+            3, 1, 5, // 下
+            5, 7, 3
+        ]
+        
+        let faceSource = SCNGeometryElement(indices: indices, primitiveType: .triangles)
+        return faceSource
+    }
+    
     
     
     
